@@ -7,10 +7,7 @@ rvm:
 # TODO  - rbx-2
 
 gemfile:
-  - gemfiles/activerecord_3.2.gemfile
-  - gemfiles/activerecord_4.0.gemfile
-  - gemfiles/activerecord_4.1.gemfile
-  - gemfiles/activerecord_edge.gemfile
+  - gemfiles/activerecord_4.2.gemfile
 
 env:
   - DB=sqlite
@@ -28,4 +25,3 @@ matrix:
     - gemfile: gemfiles/activerecord_edge.gemfile
     - rvm: jruby-19mode # travis' version of jruby has issues. Tests pass with jruby 1.7.13/java 1.8.0_11 on mac.
     - rvm: rbx-2
-

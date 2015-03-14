@@ -40,6 +40,7 @@ module WithAdvisoryLock
     end
 
     def with_advisory_lock_if_needed(&block)
+      # puts "=============already_locked? #{already_locked?}  -- lock_str #{lock_str}==============="
       if already_locked?
         Result.new(true, yield)
       elsif timeout_seconds == 0
